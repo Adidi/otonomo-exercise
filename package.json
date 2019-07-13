@@ -6,6 +6,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "lodash": "^4.17.11",
+    "prop-types": "^15.7.2",
     "react": "^16.6.0",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.6.0",
@@ -46,7 +47,5 @@
     "node-sass": "^4.9.4",
     "pretty-quick": "^1.8.0"
   },
-  "husky": {
-
-  }
+  "husky": {}
 }

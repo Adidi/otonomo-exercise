@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import PropTypes from 'prop-types'
 import noop from 'lodash/noop'
 import { Scrollbars } from 'react-custom-scrollbars'
 import { Row, Col } from 'react-flexbox-grid'
@@ -46,11 +47,19 @@ const Events = ({ events, getCarColorByVin, filter, toggleFilter }) => {
           ))}
         </div>
       </Scrollbars>
+
       <Col xs={12} className="e-count">
         <span>{`${events.length} events`}</span>
       </Col>
     </Row>
   )
+}
+
+Events.propTypes = {
+  events: PropTypes.array.isRequired,
+  filter: PropTypes.bool.isRequired,
+  getCarColorByVin: PropTypes.func.isRequired,
+  toggleFilter: PropTypes.func.isRequired,
 }
 
 export default Events

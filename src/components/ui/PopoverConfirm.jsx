@@ -1,4 +1,5 @@
 import React, { useState, cloneElement } from 'react'
+import PropTypes from 'prop-types'
 import Popover from 'react-popover'
 import Button from './Button'
 import './PopoverConfirm.scss'
@@ -31,6 +32,12 @@ const PopoverConfirm = ({ children, title, handler }) => {
   }
 
   return <Popover {...popoverProps}>{child}</Popover>
+}
+
+PopoverConfirm.propTypes = {
+  title: PropTypes.string.isRequired,
+  handler: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
 }
 
 export default PopoverConfirm

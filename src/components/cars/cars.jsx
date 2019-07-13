@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react'
+import PropTypes from 'prop-types'
 import { Row, Col } from 'react-flexbox-grid'
 import PopoverConfirm from '../ui/PopoverConfirm'
 import noop from 'lodash/noop'
@@ -74,6 +75,14 @@ const Cars = ({ cars, addCar, deleteCar, toggleCar, validateVin }) => {
       </Row>
     </section>
   )
+}
+
+Cars.propTypes = {
+  cars: PropTypes.object.isRequired,
+  addCar: PropTypes.func.isRequired,
+  deleteCar: PropTypes.func.isRequired,
+  toggleCar: PropTypes.func.isRequired,
+  validateVin: PropTypes.func.isRequired,
 }
 
 export default Cars

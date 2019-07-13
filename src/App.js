@@ -53,22 +53,19 @@ class App extends Component {
   }
 
   deleteCar = vin => e => {
-    // delete car and car
-    this.setState(
-      state => {
-        const { cars, events } = state
-        const { [vin]: car, ...restCars } = cars
-        return {
-          cars: restCars,
-          events: events.filter(event => event.vin !== vin),
-        }
-      },
-      () => {
-        // remove streamer
-        this.streamers[vin].removeHandler(this.onCarEventArrive)
-        delete this.streamers[vin]
-      },
-    )
+    // remove streamer
+    this.streamers[vin].removeHandler(this.onCarEventArrive)
+    delete this.streamers[vin]
+
+    // delete car and events
+    this.setState(state => {
+      const { cars, events } = state
+      const { [vin]: car, ...restCars } = cars
+      return {
+        cars: restCars,
+        events: events.filter(event => event.vin !== vin),
+      }
+    })
   }
 
   carExists = vin => !!this.state.cars[vin]
