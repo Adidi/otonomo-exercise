@@ -1,0 +1,36 @@
+.cars {
+    margin-bottom: 20px;
+
+    .form {
+        padding-bottom: 20px;
+
+        .err-box {
+            position: absolute;
+            color: red;
+            font-size: 12px;
+        }
+
+    }
+
+
+    .vin-box {
+        padding: 10px 5px;
+        border-bottom: 1px solid #eee;
+
+        .w {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .vin {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .del {
+            color: #78232D;
+            cursor: pointer;
+        }
+    }
+
+}

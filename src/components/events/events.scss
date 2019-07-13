@@ -1,0 +1,54 @@
+$border-color: #eee;
+
+.events {
+
+    border: 1px solid $border-color;
+
+    .wrapper {
+        padding: 10px 40px 0 40px;
+        position: relative;
+    }
+
+    .car-event {
+        margin-bottom: 20px;
+    }
+
+    .filter {
+        padding: 20px;
+        border-bottom: 1px solid $border-color;
+        position: relative;
+
+        .f-box {
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .s-top {
+            font-size: 24px;
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            cursor: pointer;
+
+            >i {
+                color: #22A9F4;
+            }
+        }
+    }
+
+    .e-count {
+        border-top: 1px solid $border-color;
+        padding: 10px;
+
+        >span {
+            font-size: 18px;
+            color: cornflowerblue;
+        }
+    }
+
+    @media only screen and (max-width: 64em) {
+        .wrapper {
+            padding: 0;
+        }
+    }
+}
